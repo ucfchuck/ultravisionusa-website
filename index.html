@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clinical-grade ultrasound systems with AI-powered intelligence. FDA 510K cleared. Researcher approved. Built for how you work.">
+    <title>UltraVision | AI-Powered Clinical Ultrasound Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066FF',
+                        secondary: '#00C2FF',
+                        dark: '#0A1628',
+                        accent: '#00FFB8'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0066FF 0%, #00C2FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0066FF 0%, #00C2FF 50%, #00FFB8 100%);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 22, 40, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">UltraVision</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#products" class="hover:text-secondary transition">Products</a>
+                    <a href="#marketplace" class="hover:text-secondary transition">AI Marketplace</a>
+                    <a href="#technology" class="hover:text-secondary transition">Technology</a>
+                    <a href="#research" class="hover:text-secondary transition">Research</a>
+                    <a href="#contact" class="px-6 py-2 gradient-bg rounded-full font-semibold hover:opacity-90 transition">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Animated background -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 py-20 text-center">
+            <div class="inline-block px-4 py-2 glass rounded-full text-sm mb-8">
+                <span class="text-accent">✨</span> FDA 510K Cleared • ISO 13485 Certified
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                Clinical-grade ultrasound.<br/>
+                <span class="gradient-text">AI-powered insights.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                The ultrasound system that keeps getting smarter. Built for researchers. Cleared for clinics. Ready for you.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#products" class="px-8 py-4 gradient-bg rounded-full font-semibold text-lg hover:opacity-90 transition inline-flex items-center">
+                    Explore Systems
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                <a href="#marketplace" class="px-8 py-4 glass rounded-full font-semibold text-lg hover:bg-white/10 transition">
+                    Try AI Marketplace
+                </a>
+            </div>
+            
+            <div class="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                <div>
+                    <div class="text-4xl font-bold gradient-text">510K</div>
+                    <div class="text-sm text-gray-400 mt-2">FDA Cleared</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text">1200+</div>
+                    <div class="text-sm text-gray-400 mt-2">MB/s DMA</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text">128</div>
+                    <div class="text-sm text-gray-400 mt-2">Element Probe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold mb-6">Choose Your System</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Three tiers designed for different needs. All with the same exceptional image quality.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Research Tier -->
+                <div class="glass rounded-3xl p-8 hover:bg-white/10 transition">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Research</h3>
+                        <p class="text-gray-400">For OEMs & Academic Labs</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-4xl font-bold mb-2">Contact</div>
+                        <div class="text-sm text-gray-400">Volume discounts available</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Full API access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Customizable UI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Raw data export</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>OEM licensing</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full py-3 border-2 border-primary rounded-full text-center font-semibold hover:bg-primary transition">
+                        Get Quote
+                    </a>
+                </div>
+                
+                <!-- Clinical Tier -->
+                <div class="relative glass rounded-3xl p-8 border-2 border-primary hover:bg-white/10 transition">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="gradient-bg px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Clinical</h3>
+                        <p class="text-gray-400">For Clinics & Hospitals</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-4xl font-bold mb-2">Starting at</div>
+                        <div class="text-sm text-gray-400">One-time or lease options</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>FDA 510K cleared</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>DICOM worklist</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>PACS integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>EMR export</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full py-3 gradient-bg rounded-full text-center font-semibold hover:opacity-90 transition">
+                        Request Demo
+                    </a>
+                </div>
+                
+                <!-- Intelligence Tier -->
+                <div class="glass rounded-3xl p-8 hover:bg-white/10 transition">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Intelligence</h3>
+                        <p class="text-gray-400">Clinical + AI Marketplace</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-4xl font-bold mb-2">$499</div>
+                        <div class="text-sm text-gray-400">per month subscription</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>All Clinical features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>AI Marketplace access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Automatic model updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#marketplace" class="block w-full py-3 border-2 border-secondary rounded-full text-center font-semibold hover:bg-secondary/20 transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Marketplace Section -->
+    <section id="marketplace" class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-2 glass rounded-full text-sm mb-6">
+                        <span class="gradient-text font-semibold">Coming Soon</span>
+                    </div>
+                    
+                    <h2 class="text-5xl font-bold mb-6">
+                        The ultrasound<br/>
+                        <span class="gradient-text">that keeps getting smarter</span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-300 mb-8">
+                        Browse AI-powered calculation packages, workflows, and models. Subscribe for continuous updates. Contribute your data, improve the models.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Automated Measurements</h4>
+                                <p class="text-gray-400">LVEF, BPD, carotid IMT, and more — calculated automatically</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Always Improving</h4>
+                                <p class="text-gray-400">Models improve over time with contributed data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Data Stays Private</h4>
+                                <p class="text-gray-400">Automatic anonymization before upload. HIPAA compliant.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center px-8 py-4 gradient-bg rounded-full font-semibold hover:opacity-90 transition">
+                        Join Beta Waitlist
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Available Packages (Preview)</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">LVEF Calculation</span>
+                                <span class="px-3 py-1 gradient-bg rounded-full text-xs">Cardiac</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Automatic wall tracing and ejection fraction</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">BPD Measurement</span>
+                                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs">OB/GYN</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Fetal head detection + gestational age</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">Carotid IMT</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Vascular</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Intima-media thickness quantification</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">Bladder Volume</span>
+                                <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-xs">General</span>
+                            </div>
+                            <p class="text-sm text-gray-400">3D volume estimation from 2D scan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-white/10 text-center">
+                        <p class="text-sm text-gray-400">+ 10 more packages in development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-32 bg-gradient-to-b from-dark to-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold mb-6">Built for Performance</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Research-grade hardware. Clinical-grade software. Production-ready reliability.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">1200+ MB/s</h3>
+                    <p class="text-gray-400">PCIe DMA throughput</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">128 Elements</h3>
+                    <p class="text-gray-400">0.2mm pitch probe</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Thunderbolt</h3>
+                    <p class="text-gray-400">High-speed interface</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">FDA 510K</h3>
+                    <p class="text-gray-400">Clinically cleared</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">Trusted by Researchers</h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Full API access. Raw data export. Open architecture. Built for innovation.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Complete programmable interface</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Custom beamforming algorithms</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>OEM partnership programs</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="inline-flex items-center text-primary hover:text-secondary transition font-semibold">
+                        Learn about Research Tier
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Research Applications</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Photoacoustics</h4>
+                            <p class="text-gray-400 text-sm">Molecular imaging and functional studies</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Elastography</h4>
+                            <p class="text-gray-400 text-sm">Tissue stiffness quantification</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Shear Wave Imaging</h4>
+                            <p class="text-gray-400 text-sm">Advanced mechanical property assessment</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Custom Sequences</h4>
+                            <p class="text-gray-400 text-sm">Full control over TX/RX parameters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-300 mb-12">
+                Contact us for a demo, quote, or to discuss your research needs.
+            </p>
+            
+            <div class="glass rounded-3xl p-8 md:p-12">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Name" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none transition">
+                        <input type="email" placeholder="Email" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none transition">
+                    </div>
+                    <input type="text" placeholder="Organization" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none transition">
+                    <select class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none transition text-gray-300">
+                        <option>I'm interested in...</option>
+                        <option>Clinical System</option>
+                        <option>Research System</option>
+                        <option>AI Marketplace</option>
+                        <option>OEM Partnership</option>
+                    </select>
+                    <textarea placeholder="Message" rows="4" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none transition resize-none"></textarea>
+                    <button type="submit" class="w-full py-4 gradient-bg rounded-full font-semibold text-lg hover:opacity-90 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-400">info@ultravisionusa.com</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-400">Contact for phone</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-400">United States</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold">UltraVision</span>
+                </div>
+                
+                <div class="text-sm text-gray-400 text-center md:text-left mb-6 md:mb-0">
+                    © 2026 UltraVision Corporation. All rights reserved.<br/>
+                    FDA 510K Cleared • ISO 13485 Certified
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Nav background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('backdrop-blur-xl');
+            } else {
+                nav.classList.remove('backdrop-blur-xl');
+            }
+        });
+    </script>
+</body>
+</html>
