@@ -1,0 +1,9 @@
+# Normalise text to LF in the repository; mark binaries so git never touches their bytes
+* text=auto eol=lf
+*.pdf binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.mp4 binary
