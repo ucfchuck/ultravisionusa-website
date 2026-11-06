@@ -1,0 +1,122 @@
+---
+title: MC-mode: Patented Ultrasound Imaging of Microcalcifications
+description: MC-mode is UltraVision's patented imaging mode that finds microcalcifications by how they move under ultrasound rather than how they echo. Developed for breast cancer screening, it has also revealed kidney stones and carotid plaque.
+path: research/mc-mode/
+priority: 0.8
+image: assets/img/research/mc-breast-vessel.webp
+---
+<section class="page-hero bg-grid">
+  <div class="glow glow--green" style="width:520px;height:520px;top:-160px;right:-120px"></div>
+  <div class="container">
+    <div class="page-hero__grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ROOT}}">Home</a><span><a href="{{ROOT}}research/">Research</a></span><span>MC-mode</span></nav>
+        <span class="badge" style="margin-bottom:18px"><span class="dot"></span> U.S. Patent 12,773,182 &middot; issued 27 October 2026</span>
+        <h1>MC-mode: seeing microcalcifications with ultrasound</h1>
+        <p class="lead">A new imaging mode, patented in the United States in October 2026. Like Doppler and elastography, MC-mode transmits its own pulse pattern and processes the returning echoes in its own way, in this case to find the microcalcifications and calcifications that B-mode cannot reliably show.</p>
+        <div class="hero__actions mt-3">
+          <a class="btn btn--primary" href="{{ROOT}}contact/?interest=Research%20System">Partner with us</a>
+          <a class="btn btn--ghost" href="{{ROOT}}contact/?interest=MC-mode%20Explanation">Request the technical explanation</a>
+        </div>
+      </div>
+      <div class="page-hero__media"><img src="{{ROOT}}assets/img/research/mc-breast-vessel.webp" alt="MC-mode overlay in red marking microcalcifications in a blood vessel in the breast" width="1024" height="681" fetchpriority="high" style="border-radius:var(--radius-lg)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight section--alt" id="patent">
+  <div class="container">
+    <div class="grid grid--split" style="align-items:start">
+      <div>
+        <span class="eyebrow">Now patented</span>
+        <h2>A protected route to ultrasound breast screening</h2>
+        <p class="lead">On 27 October 2026 the United States Patent and Trademark Office issued <strong>U.S. Patent No. 12,773,182</strong> to UltraVision for its method of imaging microcalcifications with ultrasound. The patent protects the core of MC-mode and underpins our plan to commercialize it for breast screening, where ultrasound is lower-cost than mammography, uses no ionizing radiation, and can be repeated as often as needed for patients of any age.</p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <h4>What the patent means</h4>
+          <ul class="check-list mb-0">
+            <li>U.S. Patent 12,773,182, issued 27 October 2026 (application 17/821,381)</li>
+            <li>Exclusive rights to the method behind MC-mode</li>
+            <li>A defensible position in the breast screening market</li>
+            <li>A licensable technology for OEMs and imaging companies</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>We are looking for</h4>
+          <p class="muted">Clinical sites to take part in studies, commercial partners for the breast market, and investors to fund commercialization.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--sm" href="{{ROOT}}about/#investors">Investor information</a>
+            <a class="btn btn--ghost btn--sm" href="{{ROOT}}contact/?interest=Research%20System">Contact the team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid" style="grid-template-columns: minmax(0, 72ch) 1fr; gap: clamp(32px, 5vw, 72px); align-items: start;">
+      <article class="prose">
+        <h2>Why calcifications are hard to see</h2>
+        <p>Acoustic impedance is a physical property of the tissue the sound passes through, a measure of how much resistance an ultrasound beam encounters. Tissue has an acoustic impedance of around 1.6 to 1.7 MRayl; a calcium particle is 8 to 20 MRayl. The reflections that make up a B-mode image, between one tissue and another, usually return less than 1% of the transmitted energy, while the reflection from a calcification can return up to 80%.</p>
+        <p>Calcifications therefore appear as strong white dots. But to produce a cosmetic grayscale image the strong echoes are compressed, and the calcifications disappear into any echogenic volume of tissue. Many researchers have tried to improve the imaging of microcalcifications, and the smaller the particle the more easily it is lost in tissue backscatter.</p>
+
+        <h2>A different idea: watch them move</h2>
+        <p>Our motivation was to visualize the microcalcifications in the breast that mammography relies on. To be diagnostically significant they are under half a millimetre across, which is why they are called microcalcifications (MCs).</p>
+        <p>Instead of asking how strongly a particle reflects, MC-mode asks how much energy it absorbs. A microcalcification struck by an ultrasound pulse is pushed a few microns and springs back, while the tissue around it barely moves at all. By sending the same pulse again and comparing the returning echoes, MC-mode keeps only what changed between the two, and in that brief interval the only things that moved were the microcalcifications. Everything else, including blood flow and breathing, falls away.</p>
+        <p>The result is a signal that does not depend on the particle's echo standing out from the tissue around it. That is why MC-mode finds particles that are invisible in B-mode, and finds them with a very high signal-to-noise ratio. The mode uses ordinary diagnostic frequencies and does not change the system's acoustic output.</p>
+
+        <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-location.webp" alt="Several acoustic lines of different colours overlaid at the same location, differing only at a microcalcification" loading="lazy" width="1024" height="454"><figcaption>Repeated acoustic lines at the same location differ only where a microcalcification moved</figcaption></figure>
+        <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-snr.webp" alt="Three-dimensional plot showing four sharp peaks, the signal-to-noise at four microcalcifications" loading="lazy" width="1200" height="771"><figcaption>Signal-to-noise at four MCs in a phantom</figcaption></figure>
+
+        <h2>Results so far</h2>
+        <p>The method has been tested in phantoms with clusters of 50 to 200 micron Type II MCs mixed with scatterers, where it returns strong signals only from the MCs. It has found every MC implanted in chicken and pork breast, and in phantoms it has detected MCs down to 45 microns. So far the method has produced no false positives and has detected every known MC, whether in a breast or placed in a phantom.</p>
+        <p>Unexpectedly, the same mode shows kidney stones. In an older patient scanned from the back with a curved array, a stone more than 2 mm across was clearly visible at 75 mm depth: a larger stone subtends more acoustic lines and also moves, so the high signal-to-noise compensates for size. In a younger member of our own team it picked out a tiny stone. It has also highlighted calcified plaque in a carotid artery.</p>
+        <div class="gallery gallery--2">
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-breast-cyst.webp" alt="MC-mode image showing three microcalcifications in a breast cyst" loading="lazy" width="1024" height="596"><figcaption>Three microcalcifications in a cyst, mammography proven, in the breast</figcaption></figure>
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-implant.webp" alt="MC-mode image of microcalcifications on the surface of a breast implant" loading="lazy" width="1200" height="881"><figcaption>MCs on the surface of a replacement implant; the contralateral breast, without leakage, showed none</figcaption></figure>
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-kidney-compare.webp" alt="Kidney scanned from the back, shown in MC-mode and in B-mode side by side, with a stone highlighted" loading="lazy" width="1024" height="374"><figcaption>A stone more than 2 mm across at 75 mm depth, scanned from the back of an older patient: MC-mode and B-mode side by side</figcaption></figure>
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-kidney-stone.webp" alt="Curved array image of a kidney with a very small stone highlighted in MC-mode" loading="lazy" width="1200" height="879"><figcaption>A tiny stone in the kidney of a younger member of our team</figcaption></figure>
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-carotid.webp" alt="Carotid artery with stenosis and calcifications highlighted" loading="lazy" width="1200" height="879"><figcaption>Carotid artery with stenosis, showing calcified plaque</figcaption></figure>
+          <figure class="figure"><img src="{{ROOT}}assets/img/research/mc-oxalate-vs-ha.webp" alt="Magnified phantom image showing a Type I and a Type II microcalcification" loading="lazy" width="1024" height="782"><figcaption>One Type I (oxalate) and one Type II (hydroxyapatite) MC in a phantom</figcaption></figure>
+        </div>
+
+        <h2>Breast cancer and the two kinds of calcification</h2>
+        <p>Microcalcifications detected by mammography are responsible for finding most cases of ductal carcinoma in situ, an early form of cancer, and the morphology and distribution of the MCs as defined in the BI-RADS atlas indicate the risk of malignancy. MCs associated with cancer are small rounded crystals of calcium hydroxyapatite (Type II) under 500 microns that appear as white flecks on a mammogram. Calcium oxalate MCs (Type I) also occur in the breast and appear to be a reliable sign of a benign lesion. Mammography cannot distinguish the two, and in B-mode ultrasound both are easily obscured in hyperechoic breast tissue.</p>
+        <p>In the phantom image above both particles are visible, and MC-mode can be tuned to show either one on its own. The next goal of our research is to tell the two types apart reliably, from 40 to 200 microns in diameter, so that ultrasound can indicate not only where a calcification is but whether it is likely to matter.</p>
+
+        <div class="note note--accent mt-3">
+          <p><strong>Join the MC-mode research.</strong> Anyone with an interest in participating in this work, clinically, commercially or as an investor, is urged to <a href="{{ROOT}}contact/?interest=Research%20System">contact us</a>.</p>
+        </div>
+      </article>
+      <aside class="stack">
+        <div class="card">
+          <h4>At a glance</h4>
+          <dl class="specs" style="grid-template-columns:1fr">
+            <div><dt>Patent</dt><dd>U.S. 12,773,182, issued 27 October 2026</dd></div>
+            <div><dt>Status</dt><dd>Available for research today; breast screening commercialization under way</dd></div>
+            <div><dt>Detects</dt><dd>MCs down to 45 microns in phantoms</dd></div>
+            <div><dt>Depth</dt><dd>Kidney stones shown at 75 mm</dd></div>
+            <div><dt>Acoustic output</dt><dd>Unchanged from B-mode</dd></div>
+            <div><dt>Shown in</dt><dd>Breast, kidney, carotid artery, phantoms</dd></div>
+          </dl>
+        </div>
+        <div class="card">
+          <h4>Technical explanation</h4>
+          <p class="muted small">A detailed explanation of MC-mode, with phantom and clinical results, is available on request to qualified clinical, commercial and investment partners.</p>
+          <a class="btn btn--outline btn--sm btn--block" href="{{ROOT}}contact/?interest=MC-mode%20Explanation">Request the document</a>
+        </div>
+        <div class="card">
+          <h4>Related</h4>
+          <ul class="check-list mb-0">
+            <li><a href="{{ROOT}}about/#investors">Investor information</a></li>
+            <li><a href="{{ROOT}}specialties/#breast">Breast imaging status</a></li>
+            <li><a href="{{ROOT}}research/">Research platform</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

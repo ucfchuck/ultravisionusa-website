@@ -1,0 +1,11 @@
+# build output (regenerate with: python tools/build.py)
+dist/
+
+# editor / tooling
+.claude/
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

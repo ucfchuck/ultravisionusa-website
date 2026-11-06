@@ -1,204 +1,142 @@
-# UltraVision USA Website
+# UltraVision USA website
 
-Modern, professional website for UltraVision Corporation featuring AI marketplace and clinical ultrasound systems.
+The marketing site for UltraVision Corporation (ultravisionusa.com): a fast, static,
+multi-page site with no framework. Sources live in `src/`; `python tools/build.py`
+assembles them into `dist/`, which is what gets deployed.
 
-## Features
+## What is here
 
-- ✨ Modern AI-focused design
-- 📱 Fully responsive (mobile, tablet, desktop)
-- ⚡ Fast loading (single-page, Tailwind CDN)
-- 🎨 Professional gradient aesthetics
-- 💼 Three product tiers (Research, Clinical, Intelligence)
-- 🤖 AI Marketplace section
-- 📧 Contact form
-- 🔒 Easy to deploy (static HTML)
+| Path | Purpose |
+| --- | --- |
+| `src/pages/*.html` | One source file per page: a small front-matter block (title, description, path) followed by the page body. |
+| `src/partials/` | Shared `head.html`, `nav.html` and `footer.html`. Change the menu or footer once here. |
+| `src/redirects.txt` | Old WordPress URLs mapped to their new homes. Becomes redirect stub pages and `.htaccess` rules. |
+| `assets/css/site.css` | The whole stylesheet. Design tokens (colours, radii, fonts) are CSS variables at the top. |
+| `assets/js/site.js` | Menu, dropdowns, scroll reveal, contact form, external video base URL. Configuration constants are at the top. |
+| `assets/img/` | WebP images sized for the web, plus the logo, favicons and the Open Graph image under `brand/`. |
+| `assets/docs/` | PDFs linked from the site: FDA 510(k) letters, ISO 13485 certificate, user manual. The MC-mode explanation is deliberately not here; it is sent on request. |
+| `tools/build.py` | Builds `dist/`: pages, `sitemap.xml`, redirect stubs, `.htaccess`, and copies assets. Standard library only. |
+| `tools/check_links.py` | Verifies every internal link, image and anchor in `dist/`. |
+| `.github/workflows/pages.yml` | Builds, link-checks and deploys `dist/` to GitHub Pages on every push to `master`. |
+| `CNAME`, `robots.txt`, `site.webmanifest` | Domain binding for GitHub Pages, crawler rules, web app manifest. Copied into `dist/`. |
+| `dist/` | **Generated, not committed.** Run the build to create it. |
 
-## Tech Stack
+Pages: home, products (overview, XS, XC, XR), AI marketplace, specialties, research,
+MC-mode, OEM, education, about, contact, 404.
 
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Modern utility-first CSS (via CDN)
-- **Vanilla JavaScript** - Smooth scrolling, nav effects
-- **Inter Font** - Google Fonts
+## Editing the site
 
-## Deployment Options
+1. Edit a page in `src/pages/` (or the menu and footer in `src/partials/`).
+2. Build:
 
-### Option 1: GoDaddy (Current Host)
-
-1. Log into GoDaddy cPanel
-2. Navigate to File Manager
-3. Go to `public_html` directory
-4. Upload `index.html`
-5. Done! Visit ultravisionusa.com
-
-### Option 2: GitHub Pages (Free)
-
-```bash
-# 1. Create repo on GitHub (ultravisionusa-website)
-# 2. In this directory, run:
-
-git init
-git add .
-git commit -m "Initial commit - Modern UltraVision website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ultravisionusa-website.git
-git push -u origin main
-
-# 3. On GitHub:
-# - Go to Settings → Pages
-# - Source: Deploy from branch
-# - Branch: main
-# - Folder: / (root)
-# - Save
-
-# Site will be live at: https://YOUR_USERNAME.github.io/ultravisionusa-website
-```
-
-### Option 3: Vercel/Netlify (Recommended for Production)
-
-**Vercel:**
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Follow prompts, site goes live instantly
-```
-
-**Netlify:**
-```bash
-# Install Netlify CLI
-npm i -g netlify-cli
-
-# Deploy
-netlify deploy
-
-# Follow prompts for production deployment
-```
-
-### Option 4: Custom Domain
-
-If you want to keep ultravisionusa.com but host elsewhere:
-
-1. Deploy to GitHub Pages/Vercel/Netlify
-2. Get the deployment URL
-3. In GoDaddy DNS settings:
-   - Add CNAME record: `www` → `your-deployment-url`
-   - Add A record: `@` → `deployment-ip` (if using GitHub Pages)
-
-## File Structure
-
-```
-ultravisionusa-website/
-├── index.html          # Main landing page (all-in-one)
-├── README.md           # This file
-└── assets/             # (future: images, additional CSS/JS)
-```
-
-## Customization
-
-### Colors
-
-Edit the Tailwind config in `<head>`:
-
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                primary: '#0066FF',    // Blue
-                secondary: '#00C2FF',  // Cyan
-                dark: '#0A1628',       // Dark background
-                accent: '#00FFB8'      // Green accent
-            }
-        }
-    }
-}
-```
-
-### Content
-
-All content is in `index.html`. Sections are clearly marked:
-
-- **Nav:** Update links
-- **Hero:** Main headline, CTA buttons
-- **Products:** 3 pricing tiers
-- **Marketplace:** AI packages preview
-- **Technology:** Specs and features
-- **Research:** OEM/academic focus
-- **Contact:** Form and contact info
-
-### Forms
-
-Contact form currently has no backend. Options:
-
-1. **Formspree** (easy, free tier):
-   ```html
-   <form action="https://formspree.io/f/YOUR_ID" method="POST">
+   ```bash
+   python tools/build.py
    ```
 
-2. **Netlify Forms** (if hosting on Netlify):
-   ```html
-   <form name="contact" netlify>
+3. Check links:
+
+   ```bash
+   python tools/check_links.py
    ```
 
-3. **Custom backend** (PHP on GoDaddy):
-   - Create `contact.php`
-   - Update form action to `contact.php`
+4. Preview locally:
 
-## Browser Support
+   ```bash
+   python -m http.server 8765 --directory dist
+   ```
 
-- ✅ Chrome/Edge (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+   then open http://localhost:8765/.
 
-## Performance
+Pages use `{{ROOT}}` for links and asset paths so the same files work at the domain
+root and under a sub-path (for example `ucfchuck.github.io/ultravisionusa-website/`).
+The redirect stubs and `404.html` use absolute paths and assume the domain root.
 
-- **Load Time:** <2s on 3G
-- **Lighthouse Score:** 95+ (Performance, Accessibility, SEO)
-- **Mobile-Friendly:** Yes
-- **CDN:** Using Tailwind CDN for global fast loading
+### Adding a page
 
-## SEO Optimization
+Create `src/pages/my-page.html`:
 
-Already included:
-- Meta description
-- Semantic HTML
-- Structured headings (H1-H4)
-- Alt text ready (add when images added)
+```html
+---
+title: My page title
+description: One or two sentences for search engines and link previews.
+path: my-page/
+---
+<section class="section"><div class="container"> ... </div></section>
+```
 
-To improve further:
-- Add `sitemap.xml`
-- Add `robots.txt`
-- Add Open Graph tags for social sharing
-- Add JSON-LD structured data
+Build; it appears at `/my-page/` and in the sitemap. Add it to `src/partials/nav.html`
+and `footer.html` if it belongs in the menus. Front-matter keys: `title`, `description`,
+`path`, optional `priority` (sitemap), `image` (Open Graph image path), `extra_head`,
+`out` (file name override), `absolute: true` (use `/` instead of relative links),
+`sitemap: false`.
 
-## Next Steps
+### Images
 
-### Immediate
-1. Review content and adjust copy
-2. Replace placeholder contact info
-3. Set up form backend (Formspree recommended)
-4. Test on mobile devices
+Drop web-ready images into `assets/img/<group>/`. Keep them around 1200 to 1400 px wide and
+save as WebP (quality 80 to 85). Give every `<img>` an `alt`, `width` and `height`, and add
+`loading="lazy"` for anything below the first screen.
 
-### Soon
-1. Add product images/screenshots
-2. Add customer testimonials (if available)
-3. Add case studies/publications
-4. Create additional pages (about, support, etc.)
+### Contact form
 
-### Future
-1. Add blog for announcements
-2. Create download section (brochures, white papers)
-3. Add live chat widget
-4. Implement analytics (Google Analytics, Plausible)
+The form posts to the endpoint in `CONTACT_ENDPOINT` at the top of `assets/js/site.js`.
+It is empty by default, which makes the form open the visitor's email app with the message
+filled in. To receive submissions without relying on the visitor's mail client, create a free
+form endpoint (Formspree, Web3Forms, Basin or similar), paste its URL into `CONTACT_ENDPOINT`
+and rebuild. Links such as `/contact/?interest=AI%20Marketplace` pre-select the interest.
 
-## License
+### MSK scanning videos
 
-Proprietary - UltraVision Corporation
+The specialties page embeds the scanning videos from the WordPress uploads folder on the
+current host (`MEDIA_BASE` in `assets/js/site.js`). They are 20 to 50 MB each, so they are
+not stored in this repository. Before retiring WordPress, copy
+`wp-content/uploads/2019/10` and `2019/11` somewhere permanent (a folder on the new host,
+object storage or a CDN) and point `MEDIA_BASE` at it.
 
-## Support
+## Deploying
 
-Contact: info@ultravisionusa.com
+### Option A: GitHub Pages at ultravisionusa.com (recommended)
+
+1. GitHub Pages serves private repositories only on paid plans. Either make this repository
+   public (the site is public anyway) or keep it private on GitHub Pro/Team.
+2. In the repository: Settings, Pages, Build and deployment, Source: **GitHub Actions**.
+   The workflow in `.github/workflows/pages.yml` then runs on every push to `master`.
+3. Settings, Pages, Custom domain: `ultravisionusa.com`, then tick **Enforce HTTPS** once
+   the certificate is issued (a few minutes after DNS resolves).
+4. At the DNS provider for ultravisionusa.com, replace the records for the apex and `www`:
+
+   | Type | Name | Value |
+   | --- | --- | --- |
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | ucfchuck.github.io |
+
+   Remove the old A record that points at the WordPress host (34.174.219.61) and the old
+   `www` alias. DNS changes can take up to a day to propagate everywhere.
+
+### Option B: upload to the current web host (GoDaddy, cPanel or any Apache host)
+
+1. Run `python tools/build.py`.
+2. Upload the **contents** of `dist/` into the web root (`public_html`), including the hidden
+   `.htaccess`: it provides the HTTPS and `www` redirects, the 404 page and real 301
+   redirects from the old WordPress URLs.
+3. Remove or rename the WordPress `index.php` so `index.html` is served.
+
+### Option C: Netlify, Vercel or Cloudflare Pages
+
+Point the service at this repository with build command `python tools/build.py` and publish
+directory `dist`. Add the custom domain in the service's dashboard and follow its DNS
+instructions.
+
+## Go-live checklist
+
+- [ ] Confirm the Intelligence tier price on the AI Marketplace page (shown as planned pricing of $499 per month).
+- [ ] Decide which beta and marketplace claims should be public before launch.
+- [ ] Set `CONTACT_ENDPOINT` so form submissions arrive by email without relying on the visitor's mail client.
+- [ ] Move the MSK videos off WordPress and update `MEDIA_BASE`.
+- [ ] Verify reimbursement amounts on the Education page against the current fee schedule, or remove the amounts column.
+- [ ] After DNS switches, submit `https://ultravisionusa.com/sitemap.xml` in Google Search Console.
+- [ ] Keep the WordPress site reachable for a short time (or export it) in case any content or media is still needed.
+- [ ] Once Google Patents lists US 12,773,182, link the patent number on the MC-mode page to it.
+- [ ] Delete the MC-mode explanation PDF from the WordPress media library (`wp-content/uploads/2021/07/Explanation-of-MC-mode-basic-4-.pdf` and `.pptx`); it is still publicly downloadable there even though the new site only offers it on request.

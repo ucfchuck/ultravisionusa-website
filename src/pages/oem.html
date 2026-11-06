@@ -1,0 +1,144 @@
+---
+title: OEM and Industry Partnerships: Ultrasound Boards, Software and Regulatory Support
+description: UltraVision supplies clinical and research ultrasound platforms, sub-assemblies, boards, APIs and software to qualified OEMs and industry partners, with FDA 510(k), IEC 60601-1 and ISO 13485 guidance.
+path: oem/
+priority: 0.8
+---
+<section class="page-hero bg-grid">
+  <div class="glow glow--blue" style="width:520px;height:520px;top:-160px;right:-120px"></div>
+  <div class="container">
+    <div class="page-hero__grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ROOT}}">Home</a><span>OEM</span></nav>
+        <span class="eyebrow">OEM and industry partners</span>
+        <h1>Put UltraVision inside your product</h1>
+        <p class="lead">The UltraVision may be purchased as a component for a qualified original equipment manufacturer's product, to build ultrasound capability into their products, concepts and markets. We call these design and supply agreements Industry Partnerships or OEM agreements.</p>
+        <div class="hero__actions mt-3">
+          <a class="btn btn--primary" href="{{ROOT}}contact/?interest=OEM%20Partnership">Discuss a partnership</a>
+          <a class="btn btn--ghost" href="#boards">The hardware</a>
+        </div>
+      </div>
+      <div class="page-hero__media"><img src="{{ROOT}}assets/img/tech/pcb-closeup.webp" alt="Close-up of the UltraVision ultrasound processing board" width="1400" height="887" fetchpriority="high" style="border-radius:var(--radius-lg)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">What we supply</span>
+      <h2>Four ways to build on the platform</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal"><span class="tag tag--secondary">Clinical platform</span><h3 class="mt-1">Simplified and cleared</h3><p class="muted">Functionality simplified and restricted in acoustic power output and modes so a physician or sonographer can use it easily. Conforms to an existing FDA 510(k) held by UltraVision.</p></div>
+      <div class="card reveal"><span class="tag tag--accent">Research platform</span><h3 class="mt-1">Fully open</h3><p class="muted">Transmit power, modes and virtually any function can be evaluated and optimized, which is its intended use, before submitting for regulatory approval.</p></div>
+      <div class="card reveal"><span class="tag tag--warm">Sub-assemblies</span><h3 class="mt-1">Boards and components</h3><p class="muted">Components of the UltraVision that the partner assembles into a marketable system, with monitors, PC, case and battery supply as required.</p></div>
+      <div class="card reveal"><span class="tag">API</span><h3 class="mt-1">Your own interface</h3><p class="muted">A C++ or C# Application Programming Interface so the OEM can program their own graphical user interface or a specific ultrasound process.</p></div>
+    </div>
+    <div class="grid grid-2 mt-3">
+      <div class="card reveal">
+        <h3>Partnership models</h3>
+        <ul class="check-list mb-0">
+          <li>We design a product to evaluate a concept, as in many government grants</li>
+          <li>We build production quantities indefinitely, a single unit or a preproduction run</li>
+          <li>We design the product, then transfer the technology for a license fee or a one-time buyout</li>
+          <li>The partner produces any or all components under license; keys in the system control the licensing</li>
+          <li>The partner may choose not to relabel and proceed to market under UltraVision's regulatory approvals</li>
+          <li>Non-competing franchise agreements for specialties and territories</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>Support and services</h3>
+        <ul class="check-list mb-0">
+          <li>Software products come with 25 hours of online or telephone support; further 25-hour blocks at reasonable prices</li>
+          <li>Online demonstrations, and specific images created for the OEM's area of interest</li>
+          <li>Transducer test facility: acoustic output measured and added to our transducer device file, usually within weeks of receiving three identical transducers</li>
+          <li>Experience and relationships with approved laboratories for RF emissions and susceptibility testing</li>
+          <li>Remote operation and field support over Windows remote-control tools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="boards">
+  <div class="container">
+    <div class="grid grid--split">
+      <div>
+        <span class="eyebrow">Hardware</span>
+        <h2>A small selection of boards, all programmable</h2>
+        <p>Usually three boards plus a transducer interface implement a system: <strong>UP1</strong> (9&times;3.5 in), <strong>UP2</strong> (9&times;2.5 in) and <strong>UP72</strong> (4.6&times;3.8 in). The pulsers and receivers connect to the transducer elements through multiplexers controlled by programmable devices, and the main processing board connects every channel to one very large FPGA, programmed in VHDL and normally reserved for UltraVision to supply whatever changes the OEM requests.</p>
+        <ul class="check-list">
+          <li>Programmable from Thunderbolt 2, 3 or 4, or PCIe</li>
+          <li>9 to 19 V DC at 4 A, from an IEC 60601-1 desktop supply (90 to 264 V input) or the battery option</li>
+          <li>Power supply board converting the input to multiple low-noise rails</li>
+          <li>Central controller: an Intel i7 as a compact NUC over PCIe (as in the XS), a user-supplied PC over Thunderbolt, or a Microsoft Surface Pro</li>
+          <li>Power sequencer (Arduino format) controlling rails, battery monitors and the 3D/4D stepper; multi-transducer switch on an MSP430; both updatable over USB</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <figure class="figure figure--tile reveal"><img src="{{ROOT}}assets/img/tech/up1-board.webp" alt="UP1 ultrasound processing board with FPGA and front-end components" loading="lazy" width="1400" height="585"><figcaption>UP1 ultrasound processing board</figcaption></figure>
+        <figure class="figure figure--tile reveal"><img src="{{ROOT}}assets/img/tech/up2-power.webp" alt="UP2 multiple-voltage power supply board" loading="lazy" width="1024" height="313"><figcaption>UP2 multiple-voltage power supply</figcaption></figure>
+        <figure class="figure reveal"><img src="{{ROOT}}assets/img/tech/r-components.webp" alt="Annotated layout of the UltraVision research system components inside its case" loading="lazy" width="1024" height="696"><figcaption>Component layout of a research system</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="software">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Software</span>
+      <h2>Everything from the touch screen to the FPGA</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><h3>Clinical GUI</h3><p class="muted">A touch-screen graphical user interface written in C# and Windows Presentation Foundation, with a user manual in English. As a clinical platform the distributor chooses which options ship in the basic system and which are sold as extras.</p></div>
+      <div class="card reveal"><h3>API and sample application</h3><p class="muted">A C++ interface to adapt new hardware and transducers and accommodate different languages and GUI designs, with sample application source in WPF for the C# designer.</p></div>
+      <div class="card reveal"><h3>View DX</h3><p class="muted">For the designer familiar with DirectX 11 or 12: accepts digital acoustic lines from the console and creates real-time images with B, M, colour flow, pulse-wave Doppler, elastography, photoacoustics and caliper functions.</p></div>
+      <div class="card reveal"><h3>Patient and session management</h3><p class="muted">Packaged, licensed programs with an SQL patient database where demographics and images are archived and edited, and DICOM-compatible output. Windows-based logins let the OEM pass administration to the customer.</p></div>
+      <div class="card reveal"><h3>Updates and diagnostics</h3><p class="muted">All software, including the power sequencer, the FPGA and smart transducers, is reprogrammable from the PC under the Diagnostics menu, from a USB stick or our server. Registers, voltages and temperatures are visible for remote service.</p></div>
+      <div class="card reveal"><h3>Transducer definitions</h3><p class="muted">An XML file lets the OEM edit transducer characteristics, including pitch and geometry (linear, curved, phased, micro-curved, origin), and operate the system with any transducer design within minutes. The system ships with a deployment USB stick holding all software, drivers and the Windows license.</p></div>
+    </div>
+    <div class="gallery gallery--4 mt-3">
+      <figure class="figure reveal"><img src="{{ROOT}}assets/img/ui/patient-data.webp" alt="Patient data entry screen" loading="lazy" width="1024" height="484"><figcaption>Patient data and system start</figcaption></figure>
+      <figure class="figure reveal"><img src="{{ROOT}}assets/img/ui/archive.webp" alt="Patient archive list screen" loading="lazy" width="1024" height="508"><figcaption>Patient archive, searchable by keyword or date</figcaption></figure>
+      <figure class="figure reveal"><img src="{{ROOT}}assets/img/ui/scan-screen.webp" alt="Scanning control screen" loading="lazy" width="848" height="555"><figcaption>Scanning: presets populate from the recognized transducer</figcaption></figure>
+      <figure class="figure reveal"><img src="{{ROOT}}assets/img/ui/settings.webp" alt="Administrator settings panel" loading="lazy" width="1024" height="639"><figcaption>Administrator settings: choose which controls sonographers see</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="regulatory">
+  <div class="container">
+    <div class="grid grid--split">
+      <div>
+        <span class="eyebrow">Regulatory</span>
+        <h2>Cleared platform, compliant manufacturer</h2>
+        <p>The UltraVision product has FDA 510(k) clearance and UltraVision is an ISO 13485:2016 compliant company. The indications for use covered by our 510(k) submissions are small parts (breast, testis and thyroid), superficial musculoskeletal, abdominal and peripheral vessels.</p>
+        <p>Modifications by the developer, or a different use case, may invalidate the 510(k) and require the developer to resubmit. Labeling changes, a change of intended use or technology performance changes require the OEM to file a 510(k), where we stand ready to assist on a consulting basis. A new transducer needs only an acoustic measurement placed in the design file unless it brings a new indication for use.</p>
+        <ul class="check-list">
+          <li>Guidance on the programmable electrical medical systems requirements of IEC 60601-1: software requirements, design, verification and validation</li>
+          <li>ISO 13485 quality system available to the OEM when the product label carries the UltraVision GUDID</li>
+          <li>Clearance letters K150580 and K173265 and the ISO certificate available on our <a href="{{ROOT}}about/#certifications">certifications page</a></li>
+        </ul>
+      </div>
+      <div class="gallery gallery--2">
+        <figure class="figure figure--tile reveal"><img src="{{ROOT}}assets/img/certs/iso-13485.webp" alt="ISO 13485:2016 certificate of registration for UltraVision Corporation" loading="lazy" width="800" height="891"><figcaption>ISO 13485:2016 certificate</figcaption></figure>
+        <figure class="figure figure--tile reveal"><img src="{{ROOT}}assets/img/certs/fda-k173265.webp" alt="FDA 510(k) clearance letter K173265" loading="lazy" width="525" height="1024"><figcaption>FDA 510(k) K173265, November 2017</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta">
+      <h2>Let us build the ultrasound part</h2>
+      <p class="lead">We have not, and do not, supply competing commercial products to the same market. With more than 200,000 new ultrasound systems sold each year across specialties, there is room for your product.</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="{{ROOT}}contact/?interest=OEM%20Partnership">Discuss a partnership</a>
+        <a class="btn btn--ghost" href="{{ROOT}}products/ultravision-xr/">Start with the XR</a>
+      </div>
+    </div>
+  </div>
+</section>

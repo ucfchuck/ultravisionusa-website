@@ -1,0 +1,122 @@
+---
+title: Research Ultrasound Platform: Open Architecture, API and Raw RF Data
+description: Originally designed as a research platform, UltraVision gives universities and developers an API, raw RF data, per-element transmit control and new modes including compression and ARFI elastography, diverging-wave imaging, a GPU pixel beamformer, photoacoustics, MC-mode and a high-frequency system.
+path: research/
+priority: 0.8
+---
+<section class="page-hero bg-grid">
+  <div class="glow glow--green" style="width:520px;height:520px;top:-160px;right:-120px"></div>
+  <div class="container">
+    <div class="page-hero__grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ROOT}}">Home</a><span>Research</span></nav>
+        <span class="eyebrow">Research</span>
+        <h1>Built as a research platform first</h1>
+        <p class="lead">The UltraVision began life as a research platform. It runs on a Windows PC with a GPU, so it can be implemented on any PC with sufficient resources, and systems have been sold to universities and research institutions around the world.</p>
+        <div class="hero__actions mt-3">
+          <a class="btn btn--primary" href="{{ROOT}}contact/?interest=Research%20System">Talk to an engineer</a>
+          <a class="btn btn--ghost" href="{{ROOT}}products/ultravision-xr/">The XR console</a>
+        </div>
+      </div>
+      <div class="page-hero__media"><img src="{{ROOT}}assets/img/tech/research-phantom.webp" alt="UltraVision research console with a laptop scanning a phantom" width="1200" height="770" fetchpriority="high" style="border-radius:var(--radius-lg)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--split">
+      <div>
+        <span class="eyebrow">The platform</span>
+        <h2>Open architecture, full control</h2>
+        <p>We normally supply the research platform with a laptop connected to the console over Thunderbolt, which uploads image and RF data at hundreds of megabytes per second. The minimum recommended host is a seventh-generation Intel i7 with its own GPU and a Thunderbolt interface.</p>
+        <p>The platform may be purchased with an Application Programming Interface that allows user control of most functions, including transmit control.</p>
+        <ul class="check-list">
+          <li>Complete programmable interface in C# with a C++ wrapper</li>
+          <li>Transmit: +HV, &minus;HV, ground and high impedance per channel, 512 delay and 512 waveform profiles at 6 or 4 ns granularity</li>
+          <li>Eight simultaneous beamformers; RF data per beamformer or per element at 40 or 60 MHz digitization</li>
+          <li>14-bit channel data, 20-bit beamformed data, 16-bit enveloped acoustic lines</li>
+          <li>Diagnostics with a 64-channel oscilloscope view resolvable to one clock and one amplitude level</li>
+          <li>Transducer characteristics editable in an XML file: pitch, geometry, origin, so a new design scans within minutes</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <div class="media-frame"><img src="{{ROOT}}assets/img/tech/up1-board.webp" alt="UltraVision UP1 ultrasound processing board" loading="lazy" width="1400" height="585"></div>
+        <div class="media-frame"><img src="{{ROOT}}assets/img/tech/r-components.webp" alt="Layout of the components inside an UltraVision research system" loading="lazy" width="1024" height="696"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="areas">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Areas of work</span>
+      <h2>Modes and methods we have developed</h2>
+      <p class="lead">Our expertise spans compression and ARFI elastography, diverging-wave imaging, GPU pixel beamforming and photoacoustics, as well as all the modes and methods of attaining excellent B-mode and colour flow imaging.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card reveal">
+        <h3>Compression and ARFI elastography</h3>
+        <p class="muted">Compression (strain) elastography tracks how tissue moves under light transducer pressure, in real time across the whole image: hard tissue moves as a block while soft tissue compresses. It is cleared for clinical use on the XS and XC.</p>
+        <p class="muted">Acoustic radiation force impulse (ARFI) modes use a focused push from the transducer itself to displace tissue and then image the response. On the research platform these include push displacement imaging, shear-wave speed imaging (shear-wave elastography, with speed proportional to Young's modulus), viscoelastic imaging of the tissue's time-dependent recovery, and frequency dispersion of shear-wave speed to characterize viscoelastic properties.</p>
+      </div>
+      <div class="card reveal card--featured">
+        <span class="ribbon">U.S. Patent 12,773,182</span>
+        <h3>MC-mode: imaging microcalcifications</h3>
+        <p class="muted">Our patented mode finds microcalcifications and calcifications by how they move under ultrasound rather than how strongly they echo. Developed to find the microcalcifications that mammography relies on in breast cancer screening, it has also revealed kidney stones and carotid plaque, and it forms the basis of our breast screening commercialization plan.</p>
+        <a class="link-arrow" href="{{ROOT}}research/mc-mode/">Read the MC-mode explanation <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal">
+        <h3>Diverging-wave and ultrafast imaging</h3>
+        <p class="muted">Instead of forming one focused line per transmit, the array fires an unfocused diverging or plane wave that insonifies the whole field at once, and the image is reconstructed from the returned channel data for every pixel. A handful of steered transmits, coherently compounded, replaces hundreds of focused lines, giving frame rates in the thousands per second for shear-wave tracking, flow imaging and the ARFI modes above.</p>
+      </div>
+      <div class="card reveal">
+        <h3>GPU pixel beamformer</h3>
+        <p class="muted">Our pixel beamformer moves beamforming off fixed hardware and onto the GPU, reconstructing every pixel directly from the per-channel RF data. Diverging-wave reconstruction, synthetic aperture and custom apodization become software choices that can change from frame to frame, and the result is the best image quality the platform can deliver. It is running today on the latest NVIDIA GPUs, with upgrades continuing while it goes through verification and validation ahead of clinical release.</p>
+        <a class="link-arrow" href="#roadmap">On the roadmap <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal">
+        <div class="card__media card__media--dark"><img src="{{ROOT}}assets/img/tech/hf-system.webp" alt="High-frequency ultrasound board set" loading="lazy" width="788" height="309"></div>
+        <h3>High-frequency system</h3>
+        <p class="muted">At the request of an existing customer we designed a high-frequency scanner. The analog-to-digital converters were raised to a 16-channel device running up to 125 MHz, and the pulsers to a 16-channel part driving 4 A into each channel to achieve the slew rate that transducer and cable capacitance demand. It fits the customer's familiar layout as a three-board set: two 32-channel mezzanine boards on the FPGA board.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Photoacoustics and custom sequences</h3>
+        <p class="muted">Photoacoustic imaging is supported in the clinical reference program alongside harmonic imaging and compression elastography. Researchers specify pulser phase, frequency and delays for custom algorithms, and once an algorithm is proven on the CPU and GPU the UltraVision engineers can instantiate its high-speed components in the FPGA for real-time operation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="grid grid--split">
+      <div>
+        <span class="eyebrow">Technology roadmap</span>
+        <h2>Where the platform is going</h2>
+        <p>We have identified the technologies required to offer the best image quality in medical ultrasound today, and we are building them on the same programmable platform.</p>
+      </div>
+      <ul class="timeline">
+        <li><span class="when">Working, in verification</span><h4>GPU pixel beamformer</h4><p>Running on newly available NVIDIA GPUs, replacing line-based image formation with per-pixel reconstruction from the channel data. Upgrades continue while it goes through verification and validation for clinical release. <a href="#areas">How it fits with diverging-wave imaging</a>.</p></li>
+        <li><span class="when">In development</span><h4>Ultra-wide-band transducer</h4><p>A transducer with a custom matching layer offering the widest bandwidth for the highest resolution.</p></li>
+        <li><span class="when">Patented October 2026</span><h4>MC-mode for breast screening</h4><p>With U.S. Patent 12,773,182 issued on 27 October 2026, bringing microcalcification imaging to the breast cancer market. <a href="{{ROOT}}research/mc-mode/">About MC-mode</a>.</p></li>
+        <li><span class="when">In development</span><h4>Spinal fusion transducer</h4><p>A specialized transducer capable of visualizing from inside the pedicle bone to guide pedicle screw placement.</p></li>
+        <li><span class="when">Coming soon</span><h4>AI Marketplace</h4><p>Measurement packages and models that run on the system and improve with contributed data. <a href="{{ROOT}}ai-marketplace/">Learn more</a>.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta">
+      <h2>Collaborate with UltraVision</h2>
+      <p class="lead">Grant-funded concept evaluation, custom algorithms, new transducers or a product of your own: talk to the engineers who built the platform.</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="{{ROOT}}contact/?interest=Research%20System">Contact the research team</a>
+        <a class="btn btn--ghost" href="{{ROOT}}education/#resources">Technical downloads</a>
+      </div>
+    </div>
+  </div>
+</section>
