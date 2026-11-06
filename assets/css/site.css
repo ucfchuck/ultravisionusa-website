@@ -183,7 +183,7 @@ button { font: inherit; }
 @media (max-width: 1040px) {
   .nav__toggle { display: grid; }
   /* The panel is positioned relative to the fixed bar itself and given an explicit height,
-     so the panel is positioned relative to the bar itself and given an explicit height. */
+     because position:fixed children would otherwise escape the bar. */
   .nav__menu {
     position: absolute; top: 100%; left: 0; right: 0; overflow-y: auto;
     height: calc(100vh - var(--nav-h)); height: calc(100dvh - var(--nav-h));
