@@ -102,7 +102,10 @@ object storage or a CDN) and point `MEDIA_BASE` at it.
    The workflow in `.github/workflows/pages.yml` then runs on every push to `master`.
 3. Settings, Pages, Custom domain: `ultravisionusa.com`, then tick **Enforce HTTPS** once
    the certificate is issued (a few minutes after DNS resolves).
-4. At the DNS provider for ultravisionusa.com, replace the records for the apex and `www`:
+4. DNS for ultravisionusa.com is served by SiteGround (ns1/ns2.siteground.net), the host of the
+   old WordPress site, and email is on GoDaddy (secureserver.net MX records). In SiteGround
+   Site Tools, Domain, DNS Zone Editor, change only the web records below and leave every MX
+   and mail-related record alone or email will stop:
 
    | Type | Name | Value |
    | --- | --- | --- |
@@ -113,7 +116,9 @@ object storage or a CDN) and point `MEDIA_BASE` at it.
    | CNAME | www | ucfchuck.github.io |
 
    Remove the old A record that points at the WordPress host (34.174.219.61) and the old
-   `www` alias. DNS changes can take up to a day to propagate everywhere.
+   `www` alias. DNS changes can take up to a day to propagate everywhere. The WordPress site
+   stays untouched on SiteGround and can be reached again at any time by pointing the records
+   back, so keep that hosting plan running until the new site has been live for a while.
 
 ### Option B: upload to the current web host (GoDaddy, cPanel or any Apache host)
 
