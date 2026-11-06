@@ -136,7 +136,7 @@ instructions.
 
 ## Go-live checklist
 
-- [ ] Confirm the Intelligence tier price on the AI Marketplace page (shown as planned pricing of $499 per month).
+- [ ] Publish Intelligence tier pricing on the AI Marketplace page once the beta pricing is set (currently "tiered subscription, reduced for data contributors").
 - [ ] Decide which beta and marketplace claims should be public before launch.
 - [ ] Set `CONTACT_ENDPOINT` so form submissions arrive by email without relying on the visitor's mail client.
 - [ ] Move the MSK videos off WordPress and update `MEDIA_BASE`.
