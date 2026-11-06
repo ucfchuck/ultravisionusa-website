@@ -136,6 +136,8 @@ instructions.
 
 ## Go-live checklist
 
+- [ ] Replace the ISO 13485 certificate (`assets/docs/ISO-13485-2016-certificate.pdf` and `assets/img/certs/iso-13485.webp`) with the current certificate; the one on the site still shows the WinProbe name and the Palm Beach Gardens address.
+- [ ] Regulatory wording rules now applied site-wide: the XC is labelled in development and not for sale until IEC 60601-1 testing and the letter to file are done; needle visualization, phlebology, breast, abdominal, cardiac, MC-mode and the AI Marketplace carry the 21 CFR 812 investigational notice; "For prescription use only" is in the footer; FDA clearance letters are no longer linked (available on request). Keep new copy consistent with this.
 - [ ] Publish Intelligence tier pricing on the AI Marketplace page once the beta pricing is set (currently "tiered subscription, reduced for data contributors").
 - [ ] Decide which beta and marketplace claims should be public before launch.
 - [ ] Set `CONTACT_ENDPOINT` so form submissions arrive by email without relying on the visitor's mail client.
