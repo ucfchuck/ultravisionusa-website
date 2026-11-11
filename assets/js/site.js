@@ -10,10 +10,13 @@
   var CONTACT_EMAIL = 'sales@ultravisionusa.com';
   var CONTACT_PHONE = '561 403 4884';
 
-  /* MEDIA_BASE: where the MSK scanning videos are hosted. They currently live in the
-     WordPress uploads folder; point this somewhere else (CDN, object storage) when
-     WordPress is retired. */
-  var MEDIA_BASE = 'https://ultravisionusa.com/wp-content/uploads/';
+  /* MEDIA_BASE: where the MSK scanning videos are hosted. They live in assets/media/
+     in this repository (720p re-encodes of the originals); the base is derived from
+     this script's own URL so it works on any host, including the local preview. */
+  var MEDIA_BASE = (function () {
+    var tag = document.querySelector('script[src*="site.js"]');
+    return tag ? tag.src.replace(/js\/site\.js.*$/, 'media/') : 'assets/media/';
+  })();
 
   var nav = document.querySelector('.nav');
   var toggle = document.querySelector('.nav__toggle');

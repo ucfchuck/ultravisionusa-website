@@ -12,7 +12,7 @@ assembles them into `dist/`, which is what gets deployed.
 | `src/partials/` | Shared `head.html`, `nav.html` and `footer.html`. Change the menu or footer once here. |
 | `src/redirects.txt` | Old WordPress URLs mapped to their new homes. Becomes redirect stub pages and `.htaccess` rules. |
 | `assets/css/site.css` | The whole stylesheet. Design tokens (colours, radii, fonts) are CSS variables at the top. |
-| `assets/js/site.js` | Menu, dropdowns, scroll reveal, contact form, external video base URL. Configuration constants are at the top. |
+| `assets/js/site.js` | Menu, dropdowns, scroll reveal, contact form, video base URL. Configuration constants are at the top. |
 | `assets/img/` | WebP images sized for the web, plus the logo, favicons and the Open Graph image under `brand/`. |
 | `assets/docs/` | PDFs linked from the site: FDA 510(k) letters, ISO 13485 certificate, user manual. The MC-mode explanation is deliberately not here; it is sent on request. |
 | `tools/build.py` | Builds `dist/`: pages, `sitemap.xml`, redirect stubs, `.htaccess`, and copies assets. Standard library only. |
@@ -86,11 +86,13 @@ and rebuild. Links such as `/contact/?interest=AI%20Marketplace` pre-select the 
 
 ### MSK scanning videos
 
-The specialties page embeds the scanning videos from the WordPress uploads folder on the
-current host (`MEDIA_BASE` in `assets/js/site.js`). They are 20 to 50 MB each, so they are
-not stored in this repository. Before retiring WordPress, copy
-`wp-content/uploads/2019/10` and `2019/11` somewhere permanent (a folder on the new host,
-object storage or a CDN) and point `MEDIA_BASE` at it.
+The seven scanning clips on the specialties page are served from `assets/media/msk/` in
+this repository. They are 720p, 30 fps H.264 re-encodes of the 1080p originals that lived in
+the WordPress uploads folder (`wp-content/uploads/2019/10` and `2019/11`, 22 to 88 MB each);
+the originals are not stored here. `MEDIA_BASE` in `assets/js/site.js` derives the media
+folder from the script's own URL, so the clips play on any host, including the local preview.
+To re-encode a replacement clip: `ffmpeg -i in.mp4 -vf "scale=-2:720,fps=30" -c:v libx264
+-preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 80k -ac 1 out.mp4`.
 
 ## Deploying
 
@@ -140,7 +142,6 @@ instructions.
 - [ ] Publish Intelligence tier pricing on the AI Marketplace page once the beta pricing is set (currently "tiered subscription, reduced for data contributors").
 - [ ] Decide which beta and marketplace claims should be public before launch.
 - [ ] Set `CONTACT_ENDPOINT` so form submissions arrive by email without relying on the visitor's mail client.
-- [ ] Move the MSK videos off WordPress and update `MEDIA_BASE`.
 - [ ] Verify reimbursement amounts on the Education page against the current fee schedule, or remove the amounts column.
 - [ ] After DNS switches, submit `https://ultravisionusa.com/sitemap.xml` in Google Search Console.
 - [ ] Keep the WordPress site reachable for a short time (or export it) in case any content or media is still needed.
